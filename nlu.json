@@ -45,15 +45,17 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "path" : "/Статус заказа",
+    "path" : "/Наставник",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "хочу узнать статус заказа"
+      "text" : "Вопрос2_нст"
     }, {
-      "text" : "где мой заказ?"
+      "text" : "Вопрос3_нст"
     }, {
-      "text" : "когда прибудет курьер?"
+      "text" : "Вопрос4_нст"
+    }, {
+      "text" : "Вопрос5_нст"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -61,18 +63,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "path" : "/Номер заказа",
-    "description" : "В этом интенте мы используем системную сущность «номер» (@duckling.number) вместо примеров фраз. Так интент будет срабатывать при вводе пользователем числа, например «42» или «сорок два».",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "patterns" : [ "@duckling.number" ],
-    "priority" : 0
-  }, {
-    "path" : "/Часы работы",
+    "path" : "/Обучающийся",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
