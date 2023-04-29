@@ -2,7 +2,8 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 theme: /
 
-    state: info || sessionResult = "Сценарий начинается отсюда", sessionResultColor = "#143AD1"
+    state: start || sessionResult = "Сценарий начинается отсюда", sessionResultColor = "#143AD1"
+        q!: $regex</start>
         image: https://248305.selcdn.ru/zfl_prod/64069/64072/Y6nDSc64tgJWac7N.png
         a: Добрый день! Я виртуальный секретарь О!РЕСУРС. Кем бы Вы хотели стать? || htmlEnabled = false, html = "Добрый день! Я виртуальный секретарь О!РЕСУРС. Кем бы Вы хотели стать?"
         buttons:
@@ -11,12 +12,12 @@ theme: /
         intent: /Наставник || toState = "/Вопрос2_нст"
         intent: /Обучающийся || onlyThisState = false, toState = "/Часы работы"
         intent: /sys/aimylogic/ru/parting || onlyThisState = false, toState = "/Bye"
-        event: noMatch || toState = "/info"
+        event: noMatch || toState = "/start"
 
     state: Bye
         a: Пока-пока!
         buttons:
-            "Начать" -> /info
+            "Начать" -> /start
         event: noMatch || toState = "/Bye"
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
 
@@ -87,8 +88,3 @@ theme: /
         go!: /Bye
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
         event: noMatch || toState = "/Start"
-
-    state: Start
-        buttons:
-            "Начать" -> /info
-        q!: $regex</start>
