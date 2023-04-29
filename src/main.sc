@@ -23,7 +23,7 @@ theme: /
         a: Есть ли у вас свободное время?
         buttons:
             "Да" -> /Вопрос3_нст
-            "Нет"
+            "Нет" -> /Альт3_нск
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
         event: noMatch || toState = "/Вопрос2_нст"
 
@@ -31,24 +31,60 @@ theme: /
         a: Нравится ли Вам делиться опытом?
         buttons:
             "Да" -> /Вопрос4_нст
-            "Нет"
+            "Нет" -> /Вопрос4_нст
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Вопрос3_нст"
 
     state: Вопрос4_нст
         a: Любите ли Вы общаться с людьми?
         buttons:
             "Да" -> /Вопрос5_нст
-            "Нет"
+            "Нет" -> /Альт5_нск
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Вопрос4_нст"
 
     state: Вопрос5_нст
         a: Есть ли у Вас опыт наставничества?
         buttons:
             "Да" -> /Конец_нст
-            "Нет"
+            "Нет" -> /AЛЬТконец_нск
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Вопрос5_нст"
 
     state: Конец_нст
         a: Отлично! Из Вас выйдет хороший наставник! Регистрируйтесь. (ссылка на платформу)
         go!: /Bye
+        EndSession: 
+            actions = {}
+        intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+
+    state: Альт3_нск
+        a: Нравится ли Вам делиться опытом?
+        buttons:
+            "Да" -> /Вопрос4_нст
+            "Нет" -> /Альт4_нск
+        intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Альт3_нск"
+
+    state: Альт4_нск
+        a: Любите ли Вы общаться с людьми?
+        buttons:
+            "Да" -> /Альт5_нск
+            "Нет" -> /Альт5_нск
+        intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Альт4_нск"
+
+    state: Альт5_нск
+        a: Есть ли у Вас опыт наставничества?
+        buttons:
+            "Да" -> /AЛЬТконец_нск
+            "Нет" -> /AЛЬТконец_нск
+        intent: /sys/aimylogic/ru/parting || toState = "/Bye"
+        event: noMatch || toState = "/Альт5_нск"
+
+    state: AЛЬТконец_нск
+        a: Прекрасно, но кажется Вам необходимо ещё развить свои навыки в роли участника нашей платформы. Регистрируйтесь. (ссылка на платформу)
+        go!: /Bye
+        EndSession: 
+            actions = {}
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
