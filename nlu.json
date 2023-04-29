@@ -23,6 +23,16 @@
     }
   },
   "intents" : [ {
+    "path" : "/Новый интент",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/Наставник",
     "enabled" : true,
     "shared" : false,
