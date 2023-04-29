@@ -15,8 +15,10 @@ theme: /
 
     state: Bye
         a: Пока-пока!
-        EndSession: 
-            actions = {}
+        buttons:
+            "Начать" -> /info
+        event: noMatch || toState = "/Bye"
+        intent: /sys/aimylogic/ru/parting || toState = "/Bye"
 
     state: Вопрос2_нст
         a: Есть ли у вас свободное время?
@@ -53,10 +55,6 @@ theme: /
     state: Конец_нст
         a: Отлично! Из Вас выйдет хороший наставник! Регистрируйтесь. (ссылка на платформу)
         go!: /Bye
-        EndSession: 
-            actions = {}
-        buttons:
-            "Начать" -> /info
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
         event: noMatch || toState = "/Start"
 
@@ -87,10 +85,6 @@ theme: /
     state: AЛЬТконец_нск
         a: Прекрасно, но кажется Вам необходимо ещё развить свои навыки в роли участника нашей платформы. Регистрируйтесь. (ссылка на платформу)
         go!: /Bye
-        EndSession: 
-            actions = {}
-        buttons:
-            "Начать" -> /info
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
         event: noMatch || toState = "/Start"
 
