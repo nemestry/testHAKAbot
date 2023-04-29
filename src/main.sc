@@ -27,7 +27,6 @@ theme: /
             "Да ✅ " -> /Вопрос3_нст
             "Нет ❌ " -> /Альт3_нск
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
-        event: noMatch || toState = "/Вопрос2_нст"
 
     state: Вопрос3_нст
         a: Нравится ли Вам делиться опытом?
