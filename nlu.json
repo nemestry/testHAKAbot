@@ -23,28 +23,6 @@
     }
   },
   "intents" : [ {
-    "path" : "/Оставить отзыв",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "хочу пожаловаться на вашего сотрудника"
-    }, {
-      "text" : "претензия по качеству"
-    }, {
-      "text" : "не доволен обслуживанием"
-    }, {
-      "text" : "выразить благодарность"
-    }, {
-      "text" : "сказать спасибо"
-    }, {
-      "text" : "оставить отзыв"
-    } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
     "path" : "/Наставник",
     "enabled" : true,
     "shared" : false,
@@ -61,6 +39,7 @@
       "refs" : [ ]
     },
     "patterns" : [ ],
+    "slots" : [ ],
     "priority" : 0
   }, {
     "path" : "/Обучающийся",
@@ -86,7 +65,7 @@
     "priority" : 0
   } ],
   "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url", "duckling.time" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
@@ -150,10 +129,6 @@
     "version" : "v2",
     "enabled" : false
   }, {
-    "name" : "duckling.time",
-    "version" : "v2",
-    "enabled" : true
-  }, {
     "name" : "duckling.date",
     "version" : "v2",
     "enabled" : false
@@ -190,6 +165,10 @@
   }, {
     "name" : "zb.number",
     "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v2",
+    "enabled" : true
   } ],
   "faq" : [ ],
   "skills" : [ ]
