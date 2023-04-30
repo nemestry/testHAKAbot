@@ -124,7 +124,8 @@ theme: /
         event: noMatch || toState = "/В5_ст"
 
     state: К_ст
-        a: Отлично! У нас есть для Вас наставник! Регистрируйтесь. (ссылка на платформу)
+        a: Отлично! У нас есть для Вас наставник! Регистрируйтесь.
+            Ссылка: http://banaworld.ru:22222/
         go!: /Bye
         intent: /sys/aimylogic/ru/parting || toState = "/Bye"
         event: noMatch || toState = "/К_ст"
